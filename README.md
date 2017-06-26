@@ -26,7 +26,7 @@ Context
 
 Can track all customers and any relevant customer information, including but not limited to…
 
- - [   ]customer ID
+ - [ ]customer ID
  - [  ] name
  - [  ]username/login details
  - [  ] delivery address(es)
