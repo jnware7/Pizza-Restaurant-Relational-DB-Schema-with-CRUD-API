@@ -1,6 +1,6 @@
-## Pizza-Restaurant-Relational-DB-Schema-with-CRUD-API
+# Pizza-Restaurant-Relational-DB-Schema-with-CRUD-API
 
-# Description
+## Description
 
 Piccadilly Pizza is a diamond in the rough: their deep dish is the bomb dot com, but they’re just breaking even because they lack the easy-to-use online ordering interface that will give them a competitive edge.
 
@@ -20,19 +20,19 @@ API = Application Programming Interface
 Context
 
 
-## Specifications
+# Specifications
 
-# Product/User Stories
+## Product/User Stories
 
 Can track all customers and any relevant customer information, including but not limited to…
 
- - [ ] customer ID
- - [ ] name
- - [ ] username/login details
+ - [ ]customer ID
+ - [ ]name
+ - [ ]username/login details
  - [ ] delivery address(es)
  - [ ] phone number(s)
  - [ ] payment methods on file (e.g., cash, credit, check - if credit, then the card number should also be stored)
-# Preferences & ingredients
+## Preferences & ingredients
 
  Can track each customer’s pizza preferences
  Can track the ingredients that comprise each of these preferences (e.g., onions, ham, pineapple, anchovies, bacon, etc.)
