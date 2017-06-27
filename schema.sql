@@ -2,32 +2,31 @@ CREATE TABLE customer (
 customer_id  SERIAL ,
 name VARCHAR ,
 address VARCHAR ,
-phone_num INTEGER ,
+phone_num VARCHAR ,
 payment_meth TEXT ,
 PRIMARY KEY (customer_id)
 );
 
 CREATE TABLE card_join (
-customer_id  SERIAL ,
-card_id INTEGER ,
-PRIMARY KEY (customer_id)
+customer_id  INTEGER ,
+card_id INTEGER
+
 );
 
 CREATE TABLE orders_join (
-customer_id  SERIAL ,
-orders_id INTEGER ,
-PRIMARY KEY (customer_id)
+customer_id  INTEGER ,
+orders_id INTEGER
 );
 
 CREATE TABLE card (
 id  SERIAL ,
-card_num INTEGER ,
+card_num VARCHAR ,
 PRIMARY KEY (id)
 );
 
 CREATE TABLE orders(
 id  SERIAL ,
-orders_date INTEGER ,
+orders_date TIMESTAMP ,
 PRIMARY KEY (id)
 );
 
@@ -41,9 +40,8 @@ PRIMARY KEY (pizza_data_id)
 );
 
 CREATE TABLE pizza_data_join (
-pizza_data_id  SERIAL ,
-orders_id INTEGER ,
-PRIMARY KEY (pizza_data_id)
+pizza_data_id  INTEGER ,
+orders_id INTEGER
 );
 
 CREATE TABLE ingredients (
@@ -54,9 +52,8 @@ PRIMARY KEY (id)
 );
 
 CREATE TABLE ingredients_join (
-pizza_data_id  SERIAL ,
-ingredients_id INTEGER ,
-PRIMARY KEY (pizza_data_id)
+pizza_data_id  INTEGER,
+ingredients_id INTEGER
 );
 
 CREATE TABLE drinks (
@@ -69,9 +66,8 @@ PRIMARY KEY (id)
 );
 
 CREATE TABLE drinks_join (
-orders_id  SERIAL ,
-drink_id INTEGER ,
-PRIMARY KEY (orders_id)
+orders_id INTEGER ,
+drink_id INTEGER
 );
 
 CREATE TABLE preference (
@@ -81,13 +77,12 @@ PRIMARY KEY (id)
 );
 
 CREATE TABLE preference_join (
-preference_id  SERIAL ,
-customer_id INTEGER ,
-PRIMARY KEY (preference_id)
+preference_id INTEGER ,
+customer_id INTEGER
 );
 
 CREATE TABLE user_login (
-customer_id  SERIAL ,
+customer_id  INTEGER ,
 user_login_name VARCHAR ,
 password VARCHAR ,
 salt VARCHAR ,
@@ -101,7 +96,9 @@ ALTER TABLE orders_join ADD FOREIGN KEY (orders_id) REFERENCES orders (id);
 ALTER TABLE pizza_data ADD FOREIGN KEY (pizza_data_id) REFERENCES pizza_data_join (pizza_data_id);
 ALTER TABLE pizza_data ADD FOREIGN KEY (pizza_data_id) REFERENCES ingredients_join (pizza_data_id);
 ALTER TABLE pizza_data_join ADD FOREIGN KEY (orders_id) REFERENCES orders (id);
+ALTER TABLE pizza_data_join ADD FOREIGN KEY (pizza_data_id) REFERENCES pizza_data (pizza_data_id);
 ALTER TABLE ingredients_join ADD FOREIGN KEY (ingredients_id) REFERENCES ingredients (id);
+ALTER TABLE ingredients_join ADD FOREIGN KEY (pizza_data_id) REFERENCES pizza_data (pizza_data_id);
 ALTER TABLE drinks_join ADD FOREIGN KEY (orders_id) REFERENCES orders (id);
 ALTER TABLE drinks_join ADD FOREIGN KEY (drink_id) REFERENCES drinks (id);
 ALTER TABLE preference ADD FOREIGN KEY (pizza_data_id) REFERENCES pizza_data (pizza_data_id);

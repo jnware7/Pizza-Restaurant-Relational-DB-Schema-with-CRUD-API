@@ -4,7 +4,7 @@
   "description": "## Description",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db": "dropdb pizzadb; createdb pizzadb; psql pizzadb< schema.sql; psql -d pizzadb -f seed_data.sql"
   },
   "repository": {
     "type": "git",
