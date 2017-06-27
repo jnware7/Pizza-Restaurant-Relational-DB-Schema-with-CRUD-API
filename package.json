@@ -1,0 +1,24 @@
+{
+  "name": "Pizza-Restaurant-Relational-DB-Schema-with-CRUD-API",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnware7/Pizza-Restaurant-Relational-DB-Schema-with-CRUD-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnware7/Pizza-Restaurant-Relational-DB-Schema-with-CRUD-API/issues"
+  },
+  "homepage": "https://github.com/jnware7/Pizza-Restaurant-Relational-DB-Schema-with-CRUD-API#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pg-promise": "^6.1.1"
+  }
+}
