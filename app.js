@@ -4,6 +4,20 @@ var app = express();
 
 var port = 3000;
 
+
+app.set('views','./src/views');
+
+var handlebars = require('express-handlebars')
+app.engine('.hbs', handlebars({extname:'hbs'}));
+
+app.set('view engine','.hbs');
+
+var bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended:false }))
+
+
+
 var customerRouter = express.Router();
 var orderRouter = express.Router();
 
@@ -55,6 +69,34 @@ orderRouter.route('/:id')
     })
   })
 app.use('/order',orderRouter);
+
+
+
+
+// AUTHENTICATION
+// ==============================================
+
+app.route('/login')
+
+    // show the form (GET http://localhost:3000/login)
+    .get(function(req, res) {
+        res.render('login');
+    })
+
+    // process the form (POST http://localhost:3000/login)
+    .post(function(req, res) {
+      var use_rname = req.body.username
+      var password = req.body.password
+      db.createCustomer(user_name, password)
+
+        console.log('processing');
+        res.render('login');
+    })
+  //   .catch(function(error){
+  //     res.send(error)
+  //   })
+  // })
+//...
 
 app.listen(3000,function(err){
   console.log('=>>>>  running server on port : ' + port);
