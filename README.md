@@ -52,7 +52,7 @@ Can track standard drinks, including…
  - [ ] happy hour price discounts
 # Other
 
- - [ ]The artifact is a GitHub repo
+ - [ ] The artifact is a GitHub repo
  - [ ] SQL files are well formatted and readable.
  - [ ] All the SQL keywords are capitalized.
  - [ ] The E-R diagram minimizes data redundancy.
