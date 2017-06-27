@@ -38,8 +38,8 @@ Can track all customers and any relevant customer information, including but not
  Can track the ingredients that comprise each of these preferences (e.g., onions, ham, pineapple, anchovies, bacon, etc.)
 Can track standard drinks, including…
 
- - [  ] a product ID
- - [  ] drink description
+ -  [  ] a product ID
+ -  [  ] drink description
  - [  ] manufacturer
  - [  ] supplier
  - [  ] price
