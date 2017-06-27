@@ -28,7 +28,7 @@ Can track all customers and any relevant customer information, including but not
 
  - [ ] customer ID
  - [ ] name
- - [ ]username/login details
+ - [ ] username/login details
  - [ ] delivery address(es)
  - [ ] phone number(s)
  - [ ] payment methods on file (e.g., cash, credit, check - if credit, then the card number should also be stored)
@@ -82,7 +82,7 @@ Get creative!
   - [ ] Delivery interface tracks money collected (including tips)
   - [ ] Supports calculating the proper sales tax (the pizza joint located at the intersection of the four corners of the US, so you might have to support sales taxes for Colorado, Arizona, New Mexico and Utah)
   - [ ] API documentation is included in the repo with details on each route, parameters/headers needed, and the structure of returned data
- - [ ]  A simple web user interface exists that allows users CRUD the data in the specification (this interface can be as simple as a checkbox that “orders” a pizza by creating a DB record in one of your tables)
+  - [ ] A simple web user interface exists that allows users CRUD the data in the specification (this interface can be as simple as a checkbox that “orders” a pizza by creating a DB record in one of your tables)
   - [ ] Implements a testing suite (mocha/chai)
   - [ ] Entity Relationship Diagram
 
