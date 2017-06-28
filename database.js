@@ -5,28 +5,25 @@ var db = pgp(connectionString)
 //CREATE//
 //...users
 var CREATE_LOGIN =
-`INSERT INTO user_login(
+`INSERT INTO user_login
+  customer_id ,
   user_login_name  ,
-  password  ,
-  salt  ,
-) VALUES($1,$2,$3)`
+  password
+) VALUES($1,$2)`
 //...customer
 var CREATE_CUSTOMER =
 `INSERT INTO customer(
 name,
 address,
 phone_num,
-pay_meth
+payment_meth
 ) VALUES($1,$2,$3,$4)
 )`
 //...ORDER
-// var CREATE_ORDER =
-// `INSERT INTO pizzadata(
-// size=$1,
-// type=$2,
-// pizza_id=$3,
-// price=$4,
-// )`
+var CREATE_ORDER =
+`INSERT INTO orders(
+orders_date
+) VALUES($1)`
 //
 //READ//
 

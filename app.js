@@ -85,9 +85,11 @@ app.route('/login')
 
     // process the form (POST http://localhost:3000/login)
     .post(function(req, res) {
-      var use_rname = req.body.username
+      var use_name = req.body.username
       var password = req.body.password
-      db.createCustomer(user_name, password)
+
+      console.log(user_name, password)
+      // db.createLogin(user_name, password)
 
         console.log('processing');
         res.render('login');
